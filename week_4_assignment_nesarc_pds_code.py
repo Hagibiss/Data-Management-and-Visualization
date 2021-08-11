@@ -74,7 +74,7 @@ sub2['NUMDRINKYEAR_EST'] = sub2['DRINKSPERYEAR'] * sub2['S2AQ8B']
 sub2['SCHOOLING_LEVEL'] = pd.cut(sub2.S1Q6A, [0, 7, 10, 13, 14])
 print (pd.crosstab(sub2['SCHOOLING_LEVEL'], sub2['S1Q6A']))
 
-sub2['SCHOOLING_LEVEL']=sub2['SCHOOLING_LEVEL'].cat.rename_categories(['DNC Highschool', 'DNC College', 'CMPLT College', 'CMPLT Professional Degree'])
+sub2['SCHOOLING_LEVEL']=sub2['SCHOOLING_LEVEL'].cat.rename_categories(['No Highschool', 'No College', 'College', 'Prof. Deg.'])
 
 sub2['ETHRACE2A']=sub2['ETHRACE2A'].astype('category')
 
